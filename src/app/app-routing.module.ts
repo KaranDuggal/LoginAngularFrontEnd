@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,16 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'allusers',
+    component: UsersComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'allusers/:id',
+    component: HomeComponent,
     pathMatch: 'full'
   },
   {

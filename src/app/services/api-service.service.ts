@@ -24,7 +24,7 @@ export class ApiServiceService {
     } else if (method.toLowerCase() == "get") {
       return Observable.create(observer => {
         this.http
-          .get(this.baseUrl + APIEndPoint + "?" + apiData)
+          .get(this.baseUrl + APIEndPoint + apiData)
           .subscribe((data: any) => {
             observer.next(data);
             observer.complete();

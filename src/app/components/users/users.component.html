@@ -1,1 +1,17 @@
-<p>users works!</p>
+<ul>
+    <li *ngFor="let user of arrname">
+        <hr>
+        <hr>
+        <h4>Firstname :- {{ user.firstname }}</h4>
+        <h4>Lastname :- {{ user.lastname }}</h4>
+        <h4>Email :- {{ user.email }}</h4>
+        <h4>gender :- {{ user.gender }}</h4>
+        <h4>gender :- {{ user._id }}</h4>
+        <a (click)="delete(user._id);" mat-raised-button color="primary" class="btn-login">Delete</a>
+        <br>
+        <br>
+        <a (click)="edit(user._id);" mat-raised-button color="primary" class="btn-login">Edit</a>
+        <hr>
+        <hr>
+    </li>
+</ul>
