@@ -1,0 +1,41 @@
+<div class="container">
+    <!-- <button type="submit" [disabled]="!form.form.valid"> -->
+    <!-- <button type="submit" [disabled]="!form.form.valid">
+        Save
+    </button> -->
+    <div class="card">
+        <form (ngSubmit)="doSubmitForm()">
+            <h3>Sign Up page</h3>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>firstname</mat-label>
+                <input name="firstname" matInput [(ngModel)]="data.firstname">
+            </mat-form-field>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>lastname</mat-label>
+                <input name="lastname" matInput [(ngModel)]="data.lastname">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input name="email" matInput [(ngModel)]="data.email">
+            </mat-form-field>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input name="password" matInput [(ngModel)]="data.password">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>Age</mat-label>
+                <input name="age" matInput [(ngModel)]="data.age">
+            </mat-form-field>
+            <mat-form-field class="fields" appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input name="gender" matInput [(ngModel)]="data.gender">
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" class="btn-login">Sign Up</button>
+            <br><br>
+            <a [routerLink]="['/']" mat-raised-button color="primary" class="btn-login" type="submit">Home page</a>
+        </form>
+    </div>
+</div>
